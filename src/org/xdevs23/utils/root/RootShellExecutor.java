@@ -25,7 +25,7 @@ public class RootShellExecutor {
      */ 
     public static boolean execSuSafe(String... cmds) {
         try {
-            execSu(cmds);
+            execSuMultiple(cmds);
             return true;
         } catch(Exception ex) {
             return false;
