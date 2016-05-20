@@ -37,9 +37,9 @@ public class RootShellExecutor {
      * Return true if success, false if not.
      */
     public static void execSuMultiple(String... cmds)
+            throws InterruptedException, IOException {
         Process su = Runtime.getRuntime().exec("su");
         DataOutputStream os = new DataOutputStream(su.getOutputStream());
-        throws InterruptedException, IOException {
         for ( String s : cmds) {
             os.writeBytes(s + "\n");
             os.flush();
