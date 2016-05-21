@@ -16,6 +16,15 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    android-support-v7-appcompat \
+    android-support-v4
+
+LOCAL_RESOURCE_DIR := \
+    $(LOCAL_PATH)/res
+
+LOCAL_JAVA_LIBRARIES := android-support-annotations
+
 # Define the module name and required SDK version
 LOCAL_MODULE := xdjlib
 LOCAL_SDK_VERSION := 23
