@@ -49,4 +49,26 @@ public class RootShellExecutor {
         su.waitFor();
     }
     
+    /**
+     * Execute one or more commands using the shell
+     * True if success, false if not
+     */
+     public static boolean execShell(String... cmds) {
+         try {
+             Process sh = Runtime.getRuntime().exec("/system/bin/sh");
+             DataOutputStream os = new DataOutputStream(sh.getOutputStream());
+             for ( String s : cmds ) {
+                 os.writeBytes(s + "\n");
+                 os.flush();
+             }
+             
+             os.writeBytes("exit\n");
+             os.flush();
+             sh.waitFor();
+             return true;
+         } catch(Exception ex) {
+             return false;
+         }
+     }
+    
 }
