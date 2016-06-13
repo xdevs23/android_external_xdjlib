@@ -55,9 +55,7 @@ public class EditTextDialog extends ExtendedAndroidClass {
     }
 
     private void init() {
-        mEditText = (EditText)
-                LayoutInflater.from(getContext())
-                    .inflate(R.layout.widget_ac_edittext_xquid, null);
+        mEditText = new EditText(getContext());
         mEditText.setSingleLine();
         if(!mTitle.isEmpty()) mEditText.setHint(mTitle);
         if(!mTitle.isEmpty()) mEditText.getEditableText().insert(0, mDefaultText);
