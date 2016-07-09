@@ -124,8 +124,8 @@ public class EditTextDialog extends ExtendedAndroidClass {
         AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
         builder
                 .setCancelable(true)
-                .setNegativeButton(R.string.answer_cancel, new DismissDialogButton())
-                .setPositiveButton(R.string.answer_ok, onClickListener)
+                .setNegativeButton(android.R.string.cancel, new DismissDialogButton())
+                .setPositiveButton(android.R.string.ok, onClickListener)
                 .setTitle(mTitle)
                 .setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
