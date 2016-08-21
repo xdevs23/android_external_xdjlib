@@ -96,14 +96,13 @@ public class EditTextDialog extends ExtendedAndroidClass {
         XquidRelativeLayout dialogContent = new XquidRelativeLayout(getContext());
         final TextView descTextView = new TextView(getContext());
         descTextView.setText(mDescText);
-        descTextView.setTextColor(Color.BLACK);
         dialogContent.addView(descTextView);
         dialogContent.addView(mEditText);
         XquidRelativeLayout.LayoutParams lp = new XquidRelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 (mDescText.isEmpty() ? 0 : DpUtil.dp2px(getContext(), 140))
         );
-        lp.setMarginsDp(2, 2, 2, 2, getContext());
+        lp.setMarginsDp(8, 8, 8, 8, getContext());
         dialogContent.setLayoutParams(lp);
         dialogContent.setMinimumHeight(lp.height);
         XquidRelativeLayout.LayoutParams lpe = new XquidRelativeLayout.LayoutParams(
