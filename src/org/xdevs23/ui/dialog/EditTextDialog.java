@@ -59,7 +59,6 @@ public class EditTextDialog extends ExtendedAndroidClass {
         mEditText.setSingleLine();
         if(!mTitle.isEmpty()) mEditText.setHint(mTitle);
         if(!mTitle.isEmpty()) mEditText.getEditableText().insert(0, mDefaultText);
-        mEditText.setTextColor(Color.BLACK);
 
         onClickListener = new DialogInterface.OnClickListener() {
             @Override
@@ -102,7 +101,8 @@ public class EditTextDialog extends ExtendedAndroidClass {
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 (mDescText.isEmpty() ? 0 : DpUtil.dp2px(getContext(), 140))
         );
-        lp.setMarginsDp(8, 8, 8, 8, getContext());
+        lp .setMarginsDp(8, 8, 8, 8, getContext());
+        lpe.setMarginsDp(8, 8, 8, 8, getContext());
         dialogContent.setLayoutParams(lp);
         dialogContent.setMinimumHeight(lp.height);
         XquidRelativeLayout.LayoutParams lpe = new XquidRelativeLayout.LayoutParams(
