@@ -102,12 +102,12 @@ public class EditTextDialog extends ExtendedAndroidClass {
                 (mDescText.isEmpty() ? 0 : DpUtil.dp2px(getContext(), 140))
         );
         lp .setMarginsDp(8, 8, 8, 8, getContext());
-        lpe.setMarginsDp(8, 8, 8, 8, getContext());
         dialogContent.setLayoutParams(lp);
         dialogContent.setMinimumHeight(lp.height);
         XquidRelativeLayout.LayoutParams lpe = new XquidRelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT
         );
+        lpe.setMarginsDp(8, 8, 8, 8, getContext());
         mEditText.setLayoutParams(lpe);
         // Make sure mEditText is below descTextView
         descTextView.getViewTreeObserver().addOnGlobalLayoutListener(
