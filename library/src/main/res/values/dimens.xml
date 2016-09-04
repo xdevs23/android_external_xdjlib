@@ -1,0 +1,6 @@
+<resources>
+
+    <!-- No margins / paddings -->
+    <dimen name="zero_padding">0dp</dimen>
+
+</resources>
