@@ -9,6 +9,9 @@ ext {
 android {
     compileSdkVersion 23
     buildToolsVersion "24.0.2"
+    lintOptions {
+          abortOnError false
+      }
 
     defaultConfig {
         minSdkVersion 9
