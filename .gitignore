@@ -3,3 +3,6 @@
 .jill
 .apk
 .ap_
+.gradle/
+*.iml/
+build/
